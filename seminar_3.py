@@ -51,26 +51,40 @@
 
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-import random
+# import random
 
-n = int(input('Введите размер списка: '))
-numb = []
+# n = int(input('Введите размер списка: '))
+# numb = []
 
-for i in range(n):
-    a = random.uniform(0, 10)
-    numb.append(round(a, 2))
+# for i in range(n):
+#     a = random.uniform(0, 10)
+#     numb.append(round(a, 2))
     
-min = max = numb[0] % 1
+# min = max = numb[0] % 1
 
-for i in range(len(numb)):
-    if numb[i] %1 < min:
-        min = numb[i] % 1
-    elif numb[i] %1 > max:
-        max = numb[i] % 1
-    else:
-        continue
+# for i in range(len(numb)):
+#     if numb[i] %1 < min:
+#         min = numb[i] % 1
+#     elif numb[i] %1 > max:
+#         max = numb[i] % 1
+#     else:
+#         continue
 
-diff = round(max - min, 5)
+# diff = round(max - min, 5)
 
-print(numb)
-print(diff)
+# print(numb)
+# print(diff)
+
+
+# Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+# Пример:
+
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
+
+n = int(input('Введите число: '))
+
+bin_d = bin(n)[2:]
+print(bin_d)
