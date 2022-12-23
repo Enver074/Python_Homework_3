@@ -26,22 +26,51 @@
 # - [2, 3, 5, 6] => [12, 15]
 
 
-from random import randint
+# from random import randint
+
+# n = int(input('Введите размер списка: '))
+# numb = []
+# mult = []
+
+# for i in range(n):
+#     numb.append(randint(0, 10))
+
+# for i in range(len(numb)):
+#     while i < len(numb)/2 and n > len(numb)/2:
+#         n = n-1
+#         m = numb[i] * numb[n]
+#         mult.append(m)
+#         i+=1
+
+# print(numb)
+# print(mult)
+
+# Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+
+# Пример:
+
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+import random
 
 n = int(input('Введите размер списка: '))
 numb = []
-mult = []
 
 for i in range(n):
-    numb.append(randint(0, 10))
+    a = random.uniform(0, 10)
+    numb.append(round(a, 2))
+    
+min = max = numb[0] % 1
 
 for i in range(len(numb)):
-    while i < len(numb)/2 and n > len(numb)/2:
-        n = n-1
-        m = numb[i] * numb[n]
-        mult.append(m)
-        i+=1
+    if numb[i] %1 < min:
+        min = numb[i] % 1
+    elif numb[i] %1 > max:
+        max = numb[i] % 1
+    else:
+        continue
+
+diff = round(max - min, 5)
 
 print(numb)
-print(mult)
-
+print(diff)
