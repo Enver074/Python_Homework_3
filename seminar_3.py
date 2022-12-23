@@ -86,5 +86,12 @@
 
 n = int(input('Введите число: '))
 
-bin_d = bin(n)[2:]
-print(bin_d)
+# bin_d = bin(n)[2:]
+# print(bin_d)
+
+a = ''
+
+while n > 0:
+    a = str(n % 2) + a
+    n = n // 2 
+print(a)
